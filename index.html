@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anemia Detector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <div id="welcome-screen" class="screen">
+            <div class="blood-drop">
+                <p>Welcome to<br>Anemia Detector</p>
+            </div>
+            <button id="get-started">Get started</button>
+        </div>
+        <div id="camera-screen" class="screen hidden">
+            <p class="instruction">อยู่นิ่งๆมันจะตายเหรอคะ</p>
+            <div class="camera-frame">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas" class="hidden"></canvas>
+                <div class="circle"></div>
+            </div>
+            <div class="camera-controls">
+                <button class="camera-button" id="gallery-button">📁</button>
+                <button class="camera-button" id="capture-button">📷</button>
+                <button class="camera-button" id="settings-button">⚙️</button>
+            </div>
+        </div>
+        <div id="result-screen" class="screen hidden">
+            <p class="instruction">Please don't move</p>
+            <div class="camera-frame">
+                <img id="captured-image" src="" alt="Captured image">
+                <div class="circle green"></div>
+            </div>
+            <div class="camera-controls">
+                <button class="camera-button" id="retake-button">🔄</button>
+                <button class="camera-button" id="analyze-button">✅</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+

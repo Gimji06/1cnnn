@@ -1,0 +1,209 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-color: #f0f0f0;
+}
+
+
+#app {
+    max-width: 400px;
+    margin: 0 auto;
+    height: 100%;
+    background-color: white;
+    position: relative;
+}
+
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+.blood-drop {
+    width: 200px;
+    height: 200px;
+    background-color: #cc0000;
+    border-radius: 0 50% 50% 50%;
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.blood-drop p {
+    transform: rotate(-45deg);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+button {
+    background-color: #cc0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.instruction {
+    background-color: #cc0000;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+.camera-frame {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px solid #cc0000;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+
+#video, #captured-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+
+.green {
+    border-color: #00cc00;
+}
+
+
+.camera-controls {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+
+.camera-button {
+    font-size: 24px;
+    background: none;
+    border: none;
+}
+
+
+#canvas {
+    display: none;
+}
+
+
+/* สไตล์สำหรับสวิตช์กล้อง */
+.relative {
+    position: relative;
+}
+
+
+.inline-flex {
+    display: inline-flex;
+}
+
+
+.items-center {
+    align-items: center;
+}
+
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+.peer:checked + .peer {
+    background-color: #10b981;
+}
+
+
+.peer:checked + .peer::after {
+    content: '✔️';
+    transform: translateX(100%) rotate(0);
+}
+/* ทำให้ปุ่มมีขนาดใหญ่ขึ้นสำหรับอุปกรณ์มือถือ */
+.camera-button {
+    font-size: 1.5rem; /* ขนาดของปุ่มใหญ่ขึ้น */
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+/* ตั้งค่าวิดีโอและแคนวาสให้พอดีกับหน้าจอมือถือ */
+.camera-frame {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#video, #canvas, .circle {
+    width: 100%;
+    height: auto;
+}
+
+/* ปรับแต่งสำหรับหน้าจอขนาดเล็ก */
+@media (max-width: 768px) {
+    .instruction {
+        font-size: 1.2rem;
+    }
+    .camera-button {
+        font-size: 1.2rem;
+    }
+}
